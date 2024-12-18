@@ -25,16 +25,17 @@ const poppins_bold = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Nextjs Boilerplate",
+  title: "Before MVP- Research Before You Code",
   description:
-    "actually ship(fast) - a simple to use boilerplate right out of the box with auth, payments and db functions all packed with in!",
+    "We help you research and validate your business idea before writing any code. Save time and resources by validating your concept first.",
   twitter: {
-    card: "summary_large_image", // For a large Twitter card
+    card: "summary_large_image",
     site: "https://boilerplate-nextjs-delta.vercel.app/",
-    title: "actually ship(fast) - Nextjs Boilerplate",
+
+    title: "Validate First - Research Before You Code",
     description:
-      "actually ship(fast) - a simple to use boilerplate right out of the box with auth, payments and db functions all packed with in!",
-    images: "/twitter-image.png", // Twitter image
+      "We help you research and validate your business idea before writing any code. Save time and resources by validating your concept first.",
+    images: "/twitter-image.png",
   },
 };
 
@@ -47,17 +48,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <Head>
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:site"
-          content="https://boilerplate-nextjs-delta.vercel.app/"
-        />
+        <meta name="twitter:site" content="https://beforemvp.com/" />
         <meta
           name="twitter:title"
-          content="actually ship(fast) - Nextjs Boilerplate"
+          content="Before MVP - Research Before You Code"
         />
         <meta
           name="twitter:description"
-          content="actually ship(fast) - a simple to use boilerplate right out of the box with auth, payments and db functions all packed with in!"
+          content="We help you research and validate your business idea before writing any code. Save time and resources by validating your concept first."
         />
         <meta name="twitter:image" content="/twitter-image.png" />
       </Head>
@@ -66,7 +64,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
