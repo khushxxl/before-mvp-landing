@@ -12,13 +12,15 @@ function Pricing() {
   const packages = [
     {
       name: "Basic",
-      price: "$35",
+      price: "$45",
       description: "Perfect for validating small business ideas",
       features: [
-        "Market Size Analysis",
-        "Basic Competitor Research",
-        "Customer Persona Development",
-        "1 Hour Consultation",
+        "Business Model Validation",
+        "Market Analysis",
+        "Customer Research",
+        "Revenue Expectations",
+        "Feasibility Studies",
+        "Actionable Insights",
       ],
       link: "https://buy.stripe.com/test_9AQ7tR7D33va2d2fYY",
     },
@@ -28,23 +30,22 @@ function Pricing() {
       description: "Comprehensive validation for growing businesses",
       features: [
         "Everything in Basic",
-        "Detailed Market Analysis",
-        "Customer Survey (100 responses)",
-        "Financial Projections",
-        "3 Hours of Consultation",
+        "Landing Page",
+        "1:1 Discussion Call",
+        "1 Month Support",
       ],
+      highlighted: true,
     },
     {
       name: "Bundled Pro",
       price: "$149",
       description: "Basic + Pro + Complete Branding ",
       features: [
-        "Everything in Professional",
-        "In-depth Market Research",
-        "Customer Survey (500 responses)",
-        "Complete Business Model Analysis",
-        "10 Hours of Consultation",
-        "6 Months Support",
+        "Everything in Basic",
+        "Everything in Pro",
+        "Multiple 1:1 Discussion Calls",
+        "Complete Professional Branding",
+        "Longer Support",
       ],
     },
   ];
@@ -66,7 +67,9 @@ function Pricing() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="border border-gray-200 flex flex-col justify-between dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow"
+            className={`border border-gray-200 flex flex-col justify-between dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow ${
+              pkg.highlighted ? "ring-2 ring-orange-500 scale-105" : ""
+            }`}
           >
             <div>
               <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>

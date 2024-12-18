@@ -2,6 +2,7 @@
 
 import { CodeBlock } from "@/components/code-block";
 import ExampleDemo from "@/components/landing/example";
+import FAQ from "@/components/landing/faq";
 import Footer from "@/components/landing/footer";
 import Hero from "@/components/landing/hero";
 import Pricing from "@/components/landing/pricing";
@@ -33,6 +34,7 @@ export default function Home() {
       <ExampleDemo />
       <Testimonials />
       <Pricing />
+      <FAQ />
       <Footer />
     </div>
   );

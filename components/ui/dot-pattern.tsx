@@ -14,8 +14,8 @@ interface DotPatternProps {
   [key: string]: any;
 }
 export function DotPattern({
-  width = 16,
-  height = 16,
+  width = 18,
+  height = 18,
   x = 0,
   y = 0,
   cx = 1,
@@ -31,7 +31,7 @@ export function DotPattern({
       aria-hidden="true"
       className={cn(
         "pointer-events-none absolute inset-0 h-full w-full fill-neutral-400/80",
-        className,
+        className
       )}
       {...props}
     >

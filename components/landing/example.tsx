@@ -8,69 +8,101 @@ import {
   Lightbulb,
   FileText,
   Target,
+  Code2,
+  Clock,
+  TrendingUp,
+  Shield,
 } from "lucide-react";
 
 function ExampleDemo() {
   const validationSteps = [
     {
-      title: "Product Description",
+      title: "Describe your Idea",
       description:
         "Define your product's core features, target audience, and unique value proposition",
       icon: ClipboardList,
       delay: 0,
     },
     {
-      title: "Market Analysis",
+      title: "Get a detailed report in 3 days",
       description:
-        "Comprehensive analysis of market size, trends, and competitive landscape",
-      icon: BarChart2,
-      delay: 0.2,
-    },
-    {
-      title: "Customer Research",
-      description:
-        "In-depth understanding of customer needs, pain points, and preferences",
-      icon: Users,
+        "Receive a detailed report on your idea's market potential, user needs, and competitive landscape",
+      icon: FileText,
       delay: 0.4,
     },
     {
-      title: "Business Model Validation",
-      description:
-        "Evaluate revenue streams, cost structure, and overall business viability",
-      icon: Target,
-      delay: 0.6,
-    },
-    {
-      title: "Feasibility Studies",
-      description:
-        "Technical, operational, and financial feasibility assessment",
-      icon: FileText,
-      delay: 0.8,
-    },
-    {
-      title: "Revenue Expectations",
-      description: "Projected revenue models and financial forecasting",
-      icon: DollarSign,
-      delay: 1.0,
-    },
-    {
-      title: "Actionable Insights",
-      description:
-        "Detailed recommendations and next steps for your business journey",
-      icon: Lightbulb,
+      title: "Build without doubts or save 6 months on failed product",
+      description: "Save 6 months on failed product and build without doubts",
+      icon: Code2,
       delay: 1.2,
     },
   ];
 
+  const benefits = [
+    {
+      title: "Research & Analysis",
+      description:
+        "We conduct thorough market research and competitor analysis to validate your business idea",
+      icon: Clock,
+      delay: 0.2,
+    },
+    {
+      title: "Market Research",
+      description:
+        "We analyze market trends and competition to validate your target market and business opportunity",
+      icon: TrendingUp,
+      delay: 0.4,
+    },
+    {
+      title: "Strategic Guidance",
+      description:
+        "Get a detailed validation report with actionable insights and recommended next steps",
+      icon: Shield,
+      delay: 0.6,
+    },
+  ];
+
   return (
-    <div id="process" className="max-w-5xl mx-auto p-8 pt-24">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-        <div className="border-b border-gray-200 dark:border-gray-700 pb-4 mb-6">
-          <h1 className="text-3xl font-bold">Validation Process</h1>
-          <p className="text-gray-500 dark:text-gray-400 mt-2">
+    <div id="process" className="max-w-5xl mx-auto p-8 pt-24 space-y-16">
+      <div className="mt-16">
+        <h2 className="text-4xl font-bold mb-8 text-center">
+          What is Before MVP?
+        </h2>
+        <div className="grid md:grid-cols-3 gap-10">
+          {benefits.map((benefit, index) => {
+            const Icon = benefit.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: benefit.delay }}
+                className="p-6 bg-gray-50 dark:bg-gray-700 rounded-lg hover:shadow-md transition-all duration-300"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="p-3 bg-orange-100 dark:bg-orange-900 rounded-full mb-4">
+                    <Icon className="w-8 h-8 text-orange-500" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {benefit.description}
+                  </p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className=" dark:bg-gray-800 rounded-lg  p-6">
+        {/* <div className="border-b border-gray-200 dark:border-gray-700 pb-4 mb-6">
+          <h1 className="text-3xl font-bold text-center">Validation Process</h1>
+          <p className="text-gray-500 dark:text-gray-400 mt-2 text-center">
             Our comprehensive approach to validating your business idea
           </p>
-        </div>
+        </div> */}
 
         <div className="space-y-6">
           {validationSteps.map((step, index) => {

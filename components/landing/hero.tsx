@@ -20,7 +20,7 @@ function Hero() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col items-center justify-center h-[80vh]   w-full"
+      className="flex flex-col items-center justify-center h-[80vh] z-[99px]   w-full"
     >
       <motion.h1
         initial={{ opacity: 0 }}
@@ -45,7 +45,7 @@ function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
-        className="text-lg text-gray-500 mt-5 text-center max-w-2xl"
+        className="text-lg text-gray-700 mt-5 font-semibold text-center max-w-2xl"
       >
         We help you research about your idea before you build your MVP. Save
         time and resources by validating your concept first.
@@ -86,7 +86,7 @@ function Hero() {
       />
       {/* <DotPattern
         className={cn(
-          "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+          "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
         )}
       /> */}
     </motion.div>
