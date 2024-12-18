@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "We help you research and validate your business idea before writing any code. Save time and resources by validating your concept first.",
   openGraph: {
     type: "website",
-    url: "https://beforemvp.com",
+    url: "https://before-mvp-landing.vercel.app/",
     title: "Before MVP - Research Before You Code",
     description:
       "We help you research and validate your business idea before writing any code. Save time and resources by validating your concept first.",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "https://beforemvp.com/",
+    site: "https://before-mvp-landing.vercel.app/",
     title: "Before MVP - Research Before You Code",
     description:
       "We help you research and validate your business idea before writing any code. Save time and resources by validating your concept first.",
@@ -62,7 +62,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <Head>
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="https://beforemvp.com/" />
+        <meta
+          name="twitter:site"
+          content="https://before-mvp-landing.vercel.app/"
+        />
         <meta
           name="twitter:title"
           content="Before MVP - Research Before You Code"
