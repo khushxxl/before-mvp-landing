@@ -6,7 +6,7 @@ import { getAuthenticatedUser, signoutUser } from "@/lib/db/db.actions";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
-
+import logo from "../app/assets/bmvp.jpg";
 function Navbar() {
   const [user, setUser] = useState<any>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,7 +46,7 @@ function Navbar() {
     <div className="top-0 sticky flex justify-between items-center p-5 px-4 md:px-10 bg-white z-[99] h-[80px] md:h-[100px]">
       <Image
         className="cursor-pointer w-[150px] md:w-[200px]"
-        src={require("../app/assets/bmvp.jpg")}
+        src={logo}
         alt="logo"
         width={200}
         height={130}

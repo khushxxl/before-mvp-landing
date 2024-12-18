@@ -28,14 +28,28 @@ export const metadata: Metadata = {
   title: "Before MVP- Research Before You Code",
   description:
     "We help you research and validate your business idea before writing any code. Save time and resources by validating your concept first.",
-  twitter: {
-    card: "summary_large_image",
-    site: "https://boilerplate-nextjs-delta.vercel.app/",
-
-    title: "Validate First - Research Before You Code",
+  openGraph: {
+    type: "website",
+    url: "https://beforemvp.com",
+    title: "Before MVP - Research Before You Code",
     description:
       "We help you research and validate your business idea before writing any code. Save time and resources by validating your concept first.",
-    images: "/twitter-image.png",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Before MVP - Research Before You Code",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "https://beforemvp.com/",
+    title: "Before MVP - Research Before You Code",
+    description:
+      "We help you research and validate your business idea before writing any code. Save time and resources by validating your concept first.",
+    images: "/opengraph-image.png",
   },
 };
 
@@ -57,7 +71,7 @@ export default function RootLayout({
           name="twitter:description"
           content="We help you research and validate your business idea before writing any code. Save time and resources by validating your concept first."
         />
-        <meta name="twitter:image" content="/twitter-image.png" />
+        <meta name="twitter:image" content="/opengraph-image.png" />
       </Head>
       <body
         className={`${poppins.variable} ${poppins_extrabold.variable} ${poppins_bold.variable}`}
